@@ -3,7 +3,7 @@
     <div class="row">
 
         <div class="col-xl-12 mt-5">
-            <button class="btn btn-primary float-end">Create New User</button>
+            <button class="btn btn-primary float-end router" routerLink="/create">Create New User</button>
         </div>
 
         <div class="col-xl-12 mt-5">
@@ -15,7 +15,7 @@
                         <th>LastName</th>
                         <th>Email</th>
                         <th>Gender</th>
-                        <th>Action</th>
+                        <th >Action</th>
                         
                     </tr>
                 </thead>
@@ -31,9 +31,9 @@
                             <td>{{ user.lastName }}</td>   <!-- Display last name -->
                             <td>{{ user.email }}</td>      <!-- Display email -->
                             <td>{{ user.gender }}</td>     <!-- Display gender -->
-                            <td>
-                                <button class="btn btn-warning btn-sm">Edit</button>
-                                <button class="btn btn-danger btn-sm">Delete</button>
+                            <td >
+                                <button class="btn btn-warning btn-sm m-2" [routerLink]="['/edit', user._id]">Edit</button>
+                                <button class="btn btn-danger btn-sm m-2" [routerLink]="['/delete', user._id]">Delete</button>
                             </td> <!-- Action buttons -->
                     </tr>
                 </tbody>

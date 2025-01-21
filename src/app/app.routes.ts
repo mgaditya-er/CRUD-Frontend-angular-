@@ -9,13 +9,13 @@ export const routes: Routes = [
         path: '',component : UserListComponent,
     },
     {
-        path: 'add',component : UserAddComponent,
+        path: 'create',component : UserAddComponent,
     },
     {
         path: 'edit/:id',component : UserEditComponent,
     },
     {
-        path: 'delete',component : UserDeleteComponent,
+        path: 'delete/:id',component : UserDeleteComponent,
     }
 
     

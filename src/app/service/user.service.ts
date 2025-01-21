@@ -14,6 +14,10 @@ export class UserService {
     return this.http.get(`${this.url}`)
   }
 
+  createUser(data:any){
+    return this.http.post(`${this.url}`,data)
+  }
+
 
 
    

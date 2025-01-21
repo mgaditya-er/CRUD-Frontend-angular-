@@ -3,11 +3,12 @@ import { UserService } from '../../../service/user.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
   standalone : true,
-  imports: [HttpClientModule,CommonModule],
+  imports: [HttpClientModule,CommonModule,RouterLink],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss'
 })
