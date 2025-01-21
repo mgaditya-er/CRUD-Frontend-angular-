@@ -1,0 +1,44 @@
+<div class="container-fluid p-3">
+
+    <div class="row">
+
+        <div class="col-xl-12 mt-5">
+            <button class="btn btn-primary float-end">Create New User</button>
+        </div>
+
+        <div class="col-xl-12 mt-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                       
+                        
+                        <tr *ngFor="let user of users ; let i = index">
+                        <!-- <tr *ngFor="let user of users; let i = index"></tr> -->
+                            <td>{{ i + 1 }}</td>  <!-- Display Sr. No. -->
+                            <td>{{ user.firstName }}</td>  <!-- Display first name -->
+                            <td>{{ user.lastName }}</td>   <!-- Display last name -->
+                            <td>{{ user.email }}</td>      <!-- Display email -->
+                            <td>{{ user.gender }}</td>     <!-- Display gender -->
+                            <td>
+                                <button class="btn btn-warning btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td> <!-- Action buttons -->
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
