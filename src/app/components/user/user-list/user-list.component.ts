@@ -37,4 +37,18 @@ users: any|undefined;
       }
     });
   }
+
+  deleteUser(id:any): void {
+      const isconfirm = confirm("Are you sure you want to delete this user?");
+      if (isconfirm) {
+        this._user.deleteUser(id).subscribe({next:(resp:any)=>{
+          console.log(resp)
+          this.getData();
+        },
+        error:(err:any)=>{
+          console.log(err)
+        }
+      })
+      }
+  }
 }

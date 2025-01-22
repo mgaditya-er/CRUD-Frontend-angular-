@@ -32,8 +32,8 @@
                             <td>{{ user.email }}</td>      <!-- Display email -->
                             <td>{{ user.gender }}</td>     <!-- Display gender -->
                             <td >
-                                <button class="btn btn-warning btn-sm m-2" [routerLink]="['/edit', user._id]">Edit</button>
-                                <button class="btn btn-danger btn-sm m-2" [routerLink]="['/delete', user._id]">Delete</button>
+                                <button class="btn btn-warning btn-sm m-2" [routerLink]="['/edit', user._id]"><i class="bi bi-pencil-square"></i> Edit</button>
+                                <button class="btn btn-danger btn-sm m-2"  (click)="deleteUser(user._id)"> <i class="bi bi-trash"></i>Delete</button>
                             </td> <!-- Action buttons -->
                     </tr>
                 </tbody>

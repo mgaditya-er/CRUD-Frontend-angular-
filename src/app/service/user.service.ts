@@ -17,7 +17,18 @@ export class UserService {
   createUser(data:any){
     return this.http.post(`${this.url}`,data)
   }
+  updateUser(id:any,data:any){
+    return this.http.put(`${this.url}`+id,data)
+  }
+  getSingleUser(id:any){
+    
+    return this.http.get(`${this.url}`+id)
+  }
 
+  deleteUser(id:any)
+  {
+    return this.http.delete(`${this.url}`+id)
+  }
 
 
    

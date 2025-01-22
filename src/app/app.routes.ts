@@ -14,9 +14,7 @@ export const routes: Routes = [
     {
         path: 'edit/:id',component : UserEditComponent,
     },
-    {
-        path: 'delete/:id',component : UserDeleteComponent,
-    }
+    
 
     
 ];
