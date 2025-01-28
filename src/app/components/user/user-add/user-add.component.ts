@@ -8,10 +8,11 @@ import {
 } from '@angular/forms';
 import { UserService } from '../../../service/user.service';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-user-add',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule,CommonModule],
   templateUrl: './user-add.component.html',
   styleUrl: './user-add.component.scss',
 })

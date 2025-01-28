@@ -38,17 +38,22 @@ export class UserEditComponent {
           
           this.data =resp;
           console.log('----',this.data);
+          
           this.updateuserForm = new FormGroup({
             firstName: new FormControl(this.data.firstName),
             lastName: new FormControl(this.data.lastName),
       
             email: new FormControl(this.data.email),
             gender: new FormControl(this.data.gender),
-          });
+            
+          }
+        );
+        console.log();
         },
         error:(err:any)=>{
           console.log(err);
         }
+        
         
       })
     }

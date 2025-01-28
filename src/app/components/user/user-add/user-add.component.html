@@ -1,54 +1,98 @@
-<div class="container-fluid" style="height:100vh;">
+<div class="container-fluid" style="height: 100vh">
+  <div class="row p-3">
+    <div class="col-xl-12 p-3">
+      <div class="card w-50 mx-auto">
+        <div class="card-header">Registration</div>
+        <form [formGroup]="userForm">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-6">
+                <label for="" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="firstName"
+                />
+                <div *ngIf="userForm.controls['firstName'].touched && userForm.controls['firstName'].invalid" class="text-danger">
+                    <small *ngIf="userForm.controls['firstName'].hasError('required')">First name is required.</small>
+                  </div>
+              </div>
+              
+              <div class="col-xl-6">
+                <label for="" class="form-label">LastName</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="lastName"
+                />
+                <div *ngIf="userForm.controls['lastName'].touched && userForm.controls['lastName'].invalid" class="text-danger">
+                    <small *ngIf="userForm.controls['lastName'].hasError('required')"> LastName is Required</small>
 
-    <div class="row p-3">
-        <div class="col-xl-12 p-3">
-            <div class="card w-50 mx-auto">
-                <div class="card-header">
-                    Registration
                 </div>
-                <form [formGroup]="userForm">
-                <div class="card-body ">
-                    
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <label for="" class="form-label">First Name</label>
-                                <input type="text" class="form-control" formControlName="firstName">
-                            </div>
-                            <div class="col-xl-6">
-                                <label for="" class="form-label">LastName</label>
-                                <input type="text" class="form-control" formControlName="lastName">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <label for="" class="form-label">Email</label>
-                            <input type="email" class="form-control" formControlName="email">
-                            </div>
-                            <div class="col-xl-6">
-                                <label for="gender" class="form-label">Gender</label>
-                                <div class="form-check">
-                                    <input type="radio" id="male" name="gender" value="male" class="form-check-input" formControlName="gender">
-                                    <label for="male" class="form-check-label">Male</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" id="female" name="gender" value="female" class="form-check-input" formControlName="gender">
-                                    <label for="female" class="form-check-label">Female</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" id="other" name="gender" value="other" class="form-check-input" formControlName="gender">
-                                    <label for="other" class="form-check-label">Other</label>
-                                </div>
-                            </div>
-                            
-                        </div>
-                  
-                </div>
-            </form>
-                <div class="card-footer">
-                    <div class="button btn btn-success float-end" (click)="submit()">Success</div>
-                </div>
+              </div>
             </div>
-        </div>
-    </div>
+            <div class="row">
+              <div class="col-xl-6">
+                <label for="" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="email"
+                />
+                <div *ngIf="userForm.controls['email'].touched && userForm.controls['email'].invalid" class="text-danger">
+                    <small *ngIf="userForm.controls['email'].hasError('required')"> Email is Required</small>
 
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <label for="gender" class="form-label">Gender</label>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    id="Male"
+                    name="gender"
+                    value="Male"
+                    class="form-check-input"
+                    formControlName="gender"
+                  />
+                  <label for="male" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    id="Female"
+                    name="gender"
+                    value="Female"
+                    class="form-check-input"
+                    formControlName="gender"
+                  />
+                  <label for="female" class="form-check-label">Female</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    id="Other"
+                    name="gender"
+                    value="Other"
+                    class="form-check-input"
+                    formControlName="gender"
+                  />
+                  <label for="other" class="form-check-label">Other</label>
+                </div>
+                <div *ngIf="userForm.controls['email'].touched && userForm.controls['gender'].invalid" class="text-danger">
+                    <small *ngIf="userForm.controls['gender'].hasError('required')"> Gender is Required</small>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="card-footer">
+          <div class="button btn btn-success float-end" (click)="submit()">
+            Success
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
